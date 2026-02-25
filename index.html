@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Livrili – The smart delivery app that puts you in control. Track deliveries, choose your agency, and eliminate return headaches for clients and shop owners alike." />
+  <title>Livrili</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">📦</span>
+        <span class="logo-text">livri<span class="logo-accent">li</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home" id="nav-home">Home</a></li>
+        <li><a href="#features" class="nav-link" data-section="features" id="nav-features">Features</a></li>
+        <li><a href="#download" class="nav-link" data-section="download" id="nav-download">Download</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact" id="nav-contact">Contact</a></li>
+      </ul>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ar">ع</button>
+      </div>
+      <a href="#download" class="nav-cta" id="nav-cta">Get the App</a>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-right">
+        <div class="hero-badge" id="hero-badge"> Coming Soon</div>
+        <h1 class="hero-title">
+          <span id="hero-title-static">Delivery that</span> <br />
+          <span class="gradient-text">actually works.</span>
+        </h1>
+        <p class="hero-subtitle" id="hero-subtitle">
+          Livrili eliminates return headaches for everyone — clients track every step,
+          shop owners get smart insights, and deliveries reach the right door, every time.
+        </p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                fill="currentColor" />
+            </svg>
+            <span id="hero-btn-dl">Download Free</span>
+          </a>
+          <a href="#features" class="btn btn-secondary">
+            <span id="hero-btn-feat">See Features</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z" fill="currentColor" />
+            </svg>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">1</span>
+            <span class="stat-label" id="stat-users">Active Users</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">0%</span>
+            <span class="stat-label" id="stat-rate">Delivery Rate</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">0★</span>
+            <span class="stat-label" id="stat-rating">App Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-illustration" data-aos="fade-left">
+        <!-- Animated SVG: Delivery Guy Loading Truck -->
+        <svg class="illustration-svg" viewBox="0 0 520 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ground shadow -->
+          <ellipse cx="260" cy="450" rx="200" ry="18" fill="#1A3A6B" opacity="0.15" />
+
+          <!-- Truck body -->
+          <rect x="60" y="250" width="280" height="140" rx="12" fill="#1E4DB7" />
+          <rect x="60" y="250" width="280" height="140" rx="12" fill="url(#truckGrad)" />
+
+          <!-- Truck cabin -->
+          <rect x="320" y="280" width="110" height="110" rx="12" fill="#1A3A6B" />
+          <rect x="335" y="295" width="70" height="55" rx="8" fill="#4FC3F7" opacity="0.7" />
+          <!-- windshield glare -->
+          <rect x="340" y="300" width="20" height="35" rx="4" fill="white" opacity="0.25" />
+
+          <!-- Truck wheels -->
+          <circle cx="130" cy="400" r="36" fill="#0D1F3C" />
+          <circle cx="130" cy="400" r="22" fill="#1E4DB7" />
+          <circle cx="130" cy="400" r="10" fill="#FFD600" />
+          <circle cx="290" cy="400" r="36" fill="#0D1F3C" />
+          <circle cx="290" cy="400" r="22" fill="#1E4DB7" />
+          <circle cx="290" cy="400" r="10" fill="#FFD600" />
+          <circle cx="390" cy="400" r="28" fill="#0D1F3C" />
+          <circle cx="390" cy="400" r="17" fill="#1E4DB7" />
+          <circle cx="390" cy="400" r="8" fill="#FFD600" />
+
+          <!-- Truck cargo door (open) -->
+          <rect x="62" y="252" width="240" height="5" rx="2" fill="#FFD600" />
+          <rect x="62" y="252" width="5" height="135" rx="2" fill="#FFD600" />
+
+          <!-- Package on truck -->
+          <rect x="90" y="310" width="70" height="65" rx="6" fill="#FFF176" />
+          <rect x="90" y="310" width="70" height="65" rx="6" stroke="#F9A825" stroke-width="2" />
+          <rect x="120" y="310" width="4" height="65" fill="#F9A825" opacity="0.5" />
+          <rect x="90" y="337" width="70" height="4" fill="#F9A825" opacity="0.5" />
+
+          <rect x="175" y="320" width="55" height="55" rx="6" fill="#FFF176" />
+          <rect x="175" y="320" width="55" height="55" rx="6" stroke="#F9A825" stroke-width="2" />
+          <rect x="197" y="320" width="4" height="55" fill="#F9A825" opacity="0.5" />
+          <rect x="175" y="342" width="55" height="4" fill="#F9A825" opacity="0.5" />
+
+          <!-- Delivery person body -->
+          <g class="delivery-person" id="deliveryPerson">
+            <!-- Legs -->
+            <rect x="328" y="395" width="18" height="50" rx="9" fill="#1E4DB7" />
+            <rect x="352" y="395" width="18" height="50" rx="9" fill="#1E4DB7" />
+            <!-- Shoes -->
+            <ellipse cx="337" cy="446" rx="14" ry="7" fill="#0D1F3C" />
+            <ellipse cx="361" cy="446" rx="14" ry="7" fill="#0D1F3C" />
+            <!-- Body/torso -->
+            <rect x="318" y="315" width="62" height="85" rx="20" fill="#FFD600" />
+            <!-- Vest stripe -->
+            <rect x="343" y="315" width="12" height="85" fill="#F9A825" opacity="0.5" />
+            <!-- Neck -->
+            <rect x="340" y="300" width="18" height="20" rx="9" fill="#FFCC80" />
+            <!-- Head -->
+            <circle cx="349" cy="285" r="28" fill="#FFCC80" />
+            <!-- Hair -->
+            <ellipse cx="349" cy="262" rx="27" ry="12" fill="#5D4037" />
+            <!-- Eyes -->
+            <circle cx="340" cy="282" r="4" fill="#0D1F3C" />
+            <circle cx="358" cy="282" r="4" fill="#0D1F3C" />
+            <circle cx="341" cy="281" r="1.5" fill="white" />
+            <circle cx="359" cy="281" r="1.5" fill="white" />
+            <!-- Smile -->
+            <path d="M341 292 Q349 300 357 292" stroke="#5D4037" stroke-width="2.5" stroke-linecap="round"
+              fill="none" />
+            <!-- Helmet -->
+            <rect x="325" y="258" width="48" height="22" rx="11" fill="#1E4DB7" />
+            <rect x="322" y="272" width="54" height="6" rx="3" fill="#0D1F3C" />
+            <!-- Arms -->
+            <rect x="262" y="330" width="60" height="18" rx="9" fill="#FFD600" class="arm-left" />
+            <rect x="378" y="330" width="50" height="18" rx="9" fill="#FFD600" class="arm-right" />
+            <!-- Hands -->
+            <circle cx="262" cy="339" r="10" fill="#FFCC80" />
+            <circle cx="428" cy="339" r="10" fill="#FFCC80" />
+            <!-- Box being held -->
+            <rect x="218" y="310" width="55" height="50" rx="6" fill="#FFF176" />
+            <rect x="218" y="310" width="55" height="50" rx="6" stroke="#F9A825" stroke-width="2" />
+            <rect x="240" y="310" width="4" height="50" fill="#F9A825" opacity="0.5" />
+            <rect x="218" y="330" width="55" height="4" fill="#F9A825" opacity="0.5" />
+          </g>
+
+          <!-- stars bubble – moved to HTML overlay below -->
+
+
+          <!-- Road lines -->
+          <rect x="0" y="458" width="520" height="22" rx="4" fill="#1A3A6B" opacity="0.3" />
+          <rect x="60" y="465" width="50" height="6" rx="3" fill="white" opacity="0.4" />
+          <rect x="180" y="465" width="50" height="6" rx="3" fill="white" opacity="0.4" />
+          <rect x="300" y="465" width="50" height="6" rx="3" fill="white" opacity="0.4" />
+          <rect x="420" y="465" width="50" height="6" rx="3" fill="white" opacity="0.4" />
+
+          <defs>
+            <linearGradient id="truckGrad" x1="60" y1="250" x2="340" y2="390" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#2563EB" />
+              <stop offset="100%" stop-color="#1E4DB7" />
+            </linearGradient>
+            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0D1F3C" flood-opacity="0.2" />
+            </filter>
+          </defs>
+        </svg>
+        <!-- HTML overlay bubbles (position absolute over SVG) -->
+        <div class="hero-bubble bubble-stars">★★★★★</div>
+        <div class="hero-bubble bubble-delivered" id="bubble-delivered">Delivered! ✅</div>
+        <div class="hero-bubble bubble-route" id="bubble-route">In Route 🚚</div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span id="scroll-text">Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES SECTION ========== -->
+  <section id="features" class="features">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge" id="features-badge">What We Offer</span>
+        <h2 class="section-title" id="features-title">Built for <span class="gradient-text">everyone</span> in the chain
+        </h2>
+        <p class="section-subtitle" id="features-subtitle">From the moment an order is placed to the second it lands on
+          the doorstep — Livrili keeps all parties informed, rated, and in control.</p>
+      </div>
+
+      <!-- Feature tabs -->
+      <div class="feature-tabs" data-aos="fade-up">
+        <button class="tab-btn active" data-tab="client" id="tab-client">👤 For Clients</button>
+        <button class="tab-btn" data-tab="shop" id="tab-shop">🏪 For Shop Owners</button>
+      </div>
+
+      <!-- CLIENT FEATURES -->
+      <div class="tab-content active" id="content-client" data-aos="fade-up">
+        <div class="features-grid">
+
+          <div class="feature-card">
+            <div class="feature-icon-wrap blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <h3 id="feat1-title">Live Delivery Tracking</h3>
+            <p id="feat1-desc">Follow your parcel at every stage — On Queue, Packing, In Route, Delivered, Home, or
+              Returned. Never wonder where your order is again.</p>
+            <div class="status-trail">
+              <span class="status-dot done">✓</span>
+              <div class="status-line done"></div>
+              <span class="status-dot done">✓</span>
+              <div class="status-line done"></div>
+              <span class="status-dot active">●</span>
+              <div class="status-line"></div>
+              <span class="status-dot">○</span>
+            </div>
+            <div class="status-labels">
+              <span id="status-packed">Packed</span><span id="status-route">In Route</span><span
+                id="status-nearby">Nearby</span><span id="status-home">Home</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrap yellow">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5S5.17 15.5 6 15.5s1.5.67 1.5 1.5S6.83 18.5 6 18.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <h3 id="feat2-title">Choose Your Agency</h3>
+            <p id="feat2-desc">Compare delivery agencies by rating, speed, and price. Put the power in your hands — pick
+              the courier service that suits your needs.</p>
+            <div class="agency-list">
+              <div class="agency-item">
+                <span>Zrexpress</span>
+                <span class="stars">★★★★★</span>
+              </div>
+              <div class="agency-item">
+                <span>Yalidine</span>
+                <span class="stars">★★★★☆</span>
+              </div>
+              <div class="agency-item selected">
+                <span>Gexpress</span>
+                <span class="stars">★★★★★</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrap blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <h3 id="feat3-title">Ratings & Feedback</h3>
+            <p id="feat3-desc">Browse dedicated pages for shops and agencies. Leave star ratings, read reviews, and make
+              informed
+              decisions before ordering.</p>
+            <div class="rating-showcase">
+              <div class="rating-stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star half">★</span>
+                <strong>4.8</strong>
+              </div>
+              <div class="rating-bar-group">
+                <div class="rating-bar"><span>5★</span>
+                  <div class="bar">
+                    <div class="fill" style="width:75%"></div>
+                  </div>
+                </div>
+                <div class="rating-bar"><span>4★</span>
+                  <div class="bar">
+                    <div class="fill" style="width:18%"></div>
+                  </div>
+                </div>
+                <div class="rating-bar"><span>3★</span>
+                  <div class="bar">
+                    <div class="fill" style="width:5%"></div>
+                  </div>
+                </div>
+                <div class="rating-bar"><span>2★</span>
+                  <div class="bar">
+                    <div class="fill" style="width:2%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SHOP FEATURES -->
+      <div class="tab-content" id="content-shop" data-aos="fade-up">
+        <div class="features-grid">
+
+          <div class="feature-card">
+            <div class="feature-icon-wrap blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <h3 id="shop1-title">Client Intelligence</h3>
+            <p id="shop1-desc">Access each client's return history and reason codes. Spot serial returners before
+              shipping, and protect your business from costly reversals.</p>
+            <div class="client-profile">
+              <div class="profile-row">
+                <span id="profile-orders">📦 Total Orders</span><strong>47</strong>
+              </div>
+              <div class="profile-row warning">
+                <span id="profile-returns">↩️ Returns</span><strong class="red">8 (17%)</strong>
+              </div>
+              <div class="profile-row">
+                <span id="profile-reason">💬 Top Reason</span><strong id="profile-reason-val">"Wrong size"</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card feature-card--wide">
+            <div class="feature-icon-wrap yellow">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <h3 id="shop2-title">Smart Returns Dashboard</h3>
+            <p id="shop2-desc">Visualize return trends by product, region, and time period. Our AI engine surfaces
+              actionable suggestions to reduce returns and boost customer satisfaction.</p>
+            <div class="dashboard-preview">
+              <div class="dash-chart">
+                <div class="bar-chart">
+                  <div class="bar-item">
+                    <div class="bar-fill" style="height:60%"></div><span>Mon</span>
+                  </div>
+                  <div class="bar-item">
+                    <div class="bar-fill" style="height:40%"></div><span>Tue</span>
+                  </div>
+                  <div class="bar-item">
+                    <div class="bar-fill high" style="height:85%"></div><span>Wed</span>
+                  </div>
+                  <div class="bar-item">
+                    <div class="bar-fill" style="height:30%"></div><span>Thu</span>
+                  </div>
+                  <div class="bar-item">
+                    <div class="bar-fill" style="height:55%"></div><span>Fri</span>
+                  </div>
+                  <div class="bar-item">
+                    <div class="bar-fill high" style="height:75%"></div><span>Sat</span>
+                  </div>
+                </div>
+                <div class="ai-tip">
+                  <span class="tip-icon">💡</span>
+                  <p id="ai-tip">Wednesday spike in returns correlates with "Size M" orders. Consider adding size guide
+                    pop-up.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrap blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93C9.33 17.79 7 14.5 7 11V7.18L12 5z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <h3 id="shop3-title">Order Management</h3>
+            <p id="shop3-desc">Full order lifecycle management — create, monitor, and manage all your deliveries from
+              one clean interface. Typical ordering app experience, supercharged.</p>
+            <div class="order-list">
+              <div class="order-item"><span class="order-id">#4821</span><span class="order-status delivered"
+                  id="order-delivered">Delivered</span></div>
+              <div class="order-item"><span class="order-id">#4822</span><span class="order-status route"
+                  id="order-route">In Route</span></div>
+              <div class="order-item"><span class="order-id">#4823</span><span class="order-status packing"
+                  id="order-packing">Packing</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="how-it-works">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge" id="hiw-badge">Simple Process</span>
+        <h2 class="section-title" id="hiw-title">How <span class="gradient-text">Livrili</span> works</h2>
+      </div>
+      <div class="steps-row">
+        <div class="step-card" data-aos="fade-up" data-delay="0">
+          <div class="step-number">01</div>
+          <!-- Animated SVG: person on phone ordering -->
+          <div class="step-illustration">
+            <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="80" r="70" fill="#EEF2FF" />
+              <!-- Desk -->
+              <rect x="30" y="115" width="100" height="10" rx="5" fill="#1E4DB7" opacity="0.3" />
+              <!-- Monitor -->
+              <rect x="50" y="70" width="60" height="45" rx="6" fill="#1E4DB7" />
+              <rect x="55" y="75" width="50" height="35" rx="4" fill="#4FC3F7" opacity="0.6" />
+              <rect x="73" y="115" width="14" height="10" rx="2" fill="#1E4DB7" opacity="0.5" />
+              <!-- Shopping cart icon on screen -->
+              <text x="68" y="97" font-size="18" fill="white">🛒</text>
+              <!-- Person sitting -->
+              <circle cx="80" cy="55" r="14" fill="#FFCC80" />
+              <ellipse cx="80" cy="40" rx="13" ry="6" fill="#5D4037" />
+              <rect x="62" y="65" width="36" height="30" rx="10" fill="#FFD600" />
+              <!-- Arm reaching to screen -->
+              <rect x="95" y="78" width="25" height="10" rx="5" fill="#FFD600" transform="rotate(-20 95 78)" />
+              <circle cx="118" cy="74" r="7" fill="#FFCC80" />
+              <circle cx="75" cy="52" r="3" fill="#0D1F3C" />
+              <circle cx="85" cy="52" r="3" fill="#0D1F3C" />
+              <path d="M76 60 Q80 65 84 60" stroke="#5D4037" stroke-width="2" stroke-linecap="round" fill="none" />
+            </svg>
+          </div>
+          <h3 id="step1-title">Place Your Order</h3>
+          <p id="step1-desc">Browse products, choose your delivery agency, and checkout in seconds.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card" data-aos="fade-up" data-delay="150">
+          <div class="step-number">02</div>
+          <div class="step-illustration">
+            <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="80" r="70" fill="#FFFDE7" />
+              <!-- Package box -->
+              <rect x="45" y="75" width="70" height="60" rx="8" fill="#FFF176" />
+              <rect x="45" y="75" width="70" height="60" rx="8" stroke="#F9A825" stroke-width="2" />
+              <rect x="78" y="75" width="4" height="60" fill="#F9A825" opacity="0.5" />
+              <rect x="45" y="102" width="70" height="4" fill="#F9A825" opacity="0.5" />
+              <!-- Bow on top -->
+              <rect x="70" y="55" width="20" height="25" rx="3" fill="#FFD600" />
+              <ellipse cx="70" cy="60" rx="12" ry="8" fill="#1E4DB7" />
+              <ellipse cx="90" cy="60" rx="12" ry="8" fill="#1E4DB7" />
+              <circle cx="80" cy="65" r="5" fill="#FFD600" />
+              <!-- Checkmark -->
+              <circle cx="110" cy="75" r="15" fill="#1E4DB7" />
+              <path d="M104 75 L109 81 L118 69" stroke="white" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <!-- Stars around -->
+              <text x="30" y="65" font-size="14" fill="#FFD600">✦</text>
+              <text x="120" y="115" font-size="10" fill="#1E4DB7">✦</text>
+              <text x="115" y="50" font-size="10" fill="#FFD600">✦</text>
+            </svg>
+          </div>
+          <h3 id="step2-title">Track Every Step</h3>
+          <p id="step2-desc">Watch your parcel go from packing to your doorstep with live status updates.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card" data-aos="fade-up" data-delay="300">
+          <div class="step-number">03</div>
+          <div class="step-illustration">
+            <!-- Animated SVG: Delivery person knocking on door -->
+            <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" class="knock-svg">
+              <circle cx="80" cy="80" r="70" fill="#EEF2FF" />
+              <!-- Door -->
+              <rect x="18" y="50" width="65" height="90" rx="4" fill="#1E4DB7" />
+              <rect x="22" y="54" width="57" height="82" rx="3" fill="#2563EB" />
+              <!-- Door knob -->
+              <circle cx="70" cy="100" r="5" fill="#FFD600" />
+              <!-- Door frame top arch -->
+              <path d="M18 54 Q50 30 83 54" fill="#1A3A6B" />
+              <!-- Door steps -->
+              <rect x="10" y="138" width="85" height="8" rx="2" fill="#1A3A6B" opacity="0.4" />
+              <rect x="5" y="145" width="95" height="5" rx="2" fill="#1A3A6B" opacity="0.2" />
+              <!-- Delivery Person -->
+              <g class="delivery-person-knock">
+                <!-- Legs -->
+                <rect x="102" y="120" width="12" height="25" rx="6" fill="#1E4DB7" />
+                <rect x="118" y="120" width="12" height="25" rx="6" fill="#1E4DB7" />
+                <ellipse cx="108" cy="146" rx="9" ry="5" fill="#0D1F3C" />
+                <ellipse cx="124" cy="146" rx="9" ry="5" fill="#0D1F3C" />
+                <!-- Body -->
+                <rect x="95" y="85" width="42" height="40" rx="14" fill="#FFD600" />
+                <!-- Neck -->
+                <rect x="108" y="73" width="12" height="14" rx="6" fill="#FFCC80" />
+                <!-- Head -->
+                <circle cx="114" cy="63" r="18" fill="#FFCC80" />
+                <ellipse cx="114" cy="49" rx="17" ry="8" fill="#5D4037" />
+                <!-- Cap -->
+                <rect x="99" y="49" width="30" height="10" rx="5" fill="#1E4DB7" />
+                <rect x="97" y="57" width="34" height="4" rx="2" fill="#0D1F3C" />
+                <!-- Eye -->
+                <circle cx="108" cy="62" r="3" fill="#0D1F3C" />
+                <circle cx="120" cy="62" r="3" fill="#0D1F3C" />
+                <path d="M109 70 Q114 75 119 70" stroke="#5D4037" stroke-width="2" stroke-linecap="round" fill="none" />
+                <!-- Arm knocking (animated) -->
+                <rect x="70" y="89" width="30" height="12" rx="6" fill="#FFD600" class="knock-arm" id="knockArm" />
+                <circle cx="70" cy="95" r="8" fill="#FFCC80" />
+                <!-- Package under arm -->
+                <rect x="135" y="100" width="22" height="22" rx="4" fill="#FFF176" />
+                <rect x="135" y="100" width="22" height="22" rx="4" stroke="#F9A825" stroke-width="1.5" />
+                <rect x="145" y="100" width="2.5" height="22" fill="#F9A825" opacity="0.5" />
+                <rect x="135" y="110" width="22" height="2.5" fill="#F9A825" opacity="0.5" />
+              </g>
+              <!-- Knock vibration lines -->
+              <g class="knock-lines" id="knockLines">
+                <path d="M63 85 Q58 90 63 95" stroke="#FFD600" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <path d="M57 80 Q50 88 57 97" stroke="#FFD600" stroke-width="2" stroke-linecap="round" fill="none"
+                  opacity="0.6" />
+              </g>
+            </svg>
+          </div>
+          <h3 id="step3-title">Delivered to Your Door</h3>
+          <p id="step3-desc">Your courier arrives, hands you the parcel, and you rate the experience instantly.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card" data-aos="fade-up" data-delay="450">
+          <div class="step-number">04</div>
+          <div class="step-illustration">
+            <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="80" r="70" fill="#FFFDE7" />
+              <!-- Phone -->
+              <rect x="50" y="35" width="60" height="100" rx="12" fill="#1E4DB7" />
+              <rect x="55" y="45" width="50" height="80" rx="8" fill="#EEF2FF" />
+              <!-- Home button -->
+              <circle cx="80" cy="128" r="4" fill="#FFD600" />
+              <!-- Dashboard on screen -->
+              <rect x="60" y="50" width="40" height="8" rx="3" fill="#FFD600" opacity="0.8" />
+              <rect x="60" y="63" width="25" height="5" rx="2" fill="#1E4DB7" opacity="0.5" />
+              <rect x="60" y="73" width="15" height="4" rx="2" fill="#1E4DB7" opacity="0.3" />
+              <!-- Mini bar chart -->
+              <rect x="62" y="100" width="6" height="20" rx="2" fill="#1E4DB7" opacity="0.6" />
+              <rect x="71" y="92" width="6" height="28" rx="2" fill="#FFD600" />
+              <rect x="80" y="105" width="6" height="15" rx="2" fill="#1E4DB7" opacity="0.6" />
+              <rect x="89" y="97" width="6" height="23" rx="2" fill="#FFD600" opacity="0.8" />
+              <!-- Stars -->
+              <text x="58" y="90" font-size="12" fill="#FFD600">★★★★★</text>
+              <!-- Notification ping -->
+              <circle cx="100" cy="42" r="10" fill="#FF5252" />
+              <text x="96" y="46" font-size="9" fill="white" font-weight="bold">+3</text>
+            </svg>
+          </div>
+          <h3 id="step4-title">Rate & Get Insights</h3>
+          <p id="step4-desc">Leave feedback, view your dashboard, and let Livrili make your next delivery even better.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DOWNLOAD SECTION ========== -->
+  <section id="download" class="download">
+    <div class="download-bg-shapes">
+      <div class="dl-shape dl-shape-1"></div>
+      <div class="dl-shape dl-shape-2"></div>
+    </div>
+    <div class="section-container">
+      <div class="download-inner">
+        <div class="download-text" data-aos="fade-right">
+          <span class="section-badge white" id="dl-badge">Ready to go?</span>
+          <h2 class="section-title white" id="dl-title">Get <span class="yellow-text">Livrili</span> today.</h2>
+          <p class="section-subtitle white" id="dl-subtitle">Available on iOS and Android. Free to download. Start
+            tracking smarter in under a minute.</p>
+          <div class="store-buttons">
+            <a href="#" class="store-btn" id="ios-btn">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+              </svg>
+              <div>
+                <span class="store-sub" id="ios-sub">Download on the</span>
+                <span class="store-name" id="ios-name">App Store</span>
+              </div>
+            </a>
+            <a href="#" class="store-btn" id="android-btn">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.31.05 2.22.74 2.98.8 1.14-.23 2.22-.96 3.47-.84 1.47.15 2.57.67 3.3 1.67-3.03 1.78-2.49 5.68.37 6.84-.42 1.25-.96 2.49-2.12 3.41zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+              </svg>
+              <div>
+                <span class="store-sub" id="android-sub">Get it on</span>
+                <span class="store-name" id="android-name">Google Play</span>
+              </div>
+            </a>
+          </div>
+          <div class="qr-hint">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 13h2v2h-2zM15 15h2v2h-2zM13 17h2v2h-2zM17 13h2v2h-2zM19 15h2v2h-2zM17 17h2v2h-2zM19 19h2v2h-2zM15 19h2v2h-2zM13 21h2v-2h-2z"
+                fill="currentColor" />
+            </svg>
+            <span id="qr-hint-text">Scan QR Code to download instantly</span>
+          </div>
+        </div>
+
+        <!-- Phone mockup illustration -->
+        <div class="download-illustration" data-aos="fade-left">
+          <div class="phone-mockup">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="app-screen">
+                  <div class="app-header-bar">
+                    <span class="app-logo-sm">📦 livrili</span>
+                    <span class="app-notif">🔔</span>
+                  </div>
+                  <div class="app-greeting" id="app-greeting">Good afternoon, Ahmed 👋</div>
+                  <div class="app-track-card">
+                    <div class="track-title">Order #4822</div>
+                    <div class="track-progress">
+                      <div class="track-step done">
+                        <div class="track-dot"></div>
+                        <span id="track-packed">Packed</span>
+                      </div>
+                      <div class="track-line active"></div>
+                      <div class="track-step active">
+                        <div class="track-dot"></div>
+                        <span id="track-route">In Route</span>
+                      </div>
+                      <div class="track-line"></div>
+                      <div class="track-step">
+                        <div class="track-dot"></div>
+                        <span id="track-home">Home</span>
+                      </div>
+                    </div>
+                    <div class="eta-badge">ETA: 25 min 🚚</div>
+                  </div>
+                  <div class="app-section-title" id="nearby-shops">Nearby Shops</div>
+                  <div class="app-shop-row">
+                    <div class="app-shop-card">
+                      <div class="shop-emoji">👗</div>
+                      <div class="shop-name">FashionHub</div>
+                      <div class="shop-rating">★ 4.7</div>
+                    </div>
+                    <div class="app-shop-card">
+                      <div class="shop-emoji">📱</div>
+                      <div class="shop-name">TechZone</div>
+                      <div class="shop-rating">★ 4.9</div>
+                    </div>
+                  </div>
+                  <div class="app-nav-bar">
+                    <span>🏠</span>
+                    <span>📦</span>
+                    <span class="active-nav">🗺️</span>
+                    <span>⭐</span>
+                    <span>👤</span>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-notch"></div>
+              <div class="phone-home-indicator"></div>
+            </div>
+            <!-- Floating badges -->
+            <div class="phone-badge badge-1" id="badge-rating">★ 4.8 Rating</div>
+            <div class="phone-badge badge-2" id="badge-delivered">🔔 Delivered!</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge" id="test-badge">Loved by users</span>
+        <h2 class="section-title" id="test-title">What people <span class="gradient-text">are saying</span></h2>
+      </div>
+      <div class="testimonials-grid" data-aos="fade-up">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p id="test1-text">"Finally an app that tells me exactly where my package is without me having to call anyone.
+            Livrili is a game changer!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: #1E4DB7;">S</div>
+            <div>
+              <strong>Sarah M.</strong>
+              <span id="test1-role">Regular Shopper</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card featured">
+          <div class="testimonial-stars">★★★★★</div>
+          <p id="test2-text">"The returns dashboard is incredible. We reduced our return rate by 30% in two months just
+            by following Livrili's AI suggestions."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: #FFD600; color:#0D1F3C">K</div>
+            <div>
+              <strong>Karim B.</strong>
+              <span id="test2-role">E-commerce Owner</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★☆</div>
+          <p id="test3-text">"Being able to choose which agency delivers my parcels puts the power back in my hands.
+            Love the transparency and star ratings."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: #0D1F3C;">N</div>
+            <div>
+              <strong>Nadia C.</strong>
+              <span id="test3-role">Frequent Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="contact">
+    <div class="section-container">
+      <div class="contact-inner">
+        <div class="contact-info" data-aos="fade-right">
+          <span class="section-badge" id="contact-badge">Reach Us</span>
+          <h2 class="section-title" id="contact-title">Let's <span class="gradient-text">talk.</span></h2>
+          <p class="section-subtitle" id="contact-subtitle">Have a question, partnership inquiry, or feedback? We're
+            always happy to hear from you.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    fill="currentColor" />
+                </svg>
+              </div>
+              <div>
+                <strong id="lbl-email">Email</strong>
+                <span>contacts@livrili.app</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                    fill="currentColor" />
+                </svg>
+              </div>
+              <div>
+                <strong id="lbl-phone">Phone</strong>
+                <span>+213 XXX XXX XXX</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                    fill="currentColor" />
+                </svg>
+              </div>
+              <div>
+                <strong id="lbl-location">Location</strong>
+                <span>Algeria 🇩🇿</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter/X">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" data-aos="fade-left">
+          <div class="form-group">
+            <label for="name" id="form-name-lbl">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Nourhane Gasmi" required />
+          </div>
+          <div class="form-group">
+            <label for="email" id="form-email-lbl">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="nourhane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject" id="form-subject-lbl">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic...</option>
+              <option value="support">General Support</option>
+              <option value="partnership">Partnership</option>
+              <option value="feedback">Feedback</option>
+              <option value="press">Press Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" id="form-msg-lbl">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span id="form-btn-text">Send Message</span>
+            <span class="btn-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor" />
+              </svg>
+            </span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Thanks! We'll get back to you within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <span class="logo-icon">📦</span>
+            <span class="logo-text">livri<span class="logo-accent">li</span></span>
+          </a>
+          <p>Making delivery smarter, one parcel at a time.</p>
+        </div>
+        <div class="footer-links-group">
+          <strong>App</strong>
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer-links-group">
+          <strong>Company</strong>
+          <a href="#contact">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-links-group">
+          <strong>Follow Us</strong>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter / X</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Livrili. All rights reserved.</span>
+        <span>Built with ❤️ in Algeria 🇩🇿</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
